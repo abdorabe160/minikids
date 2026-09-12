@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سلة التسوق - MiniKids</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="cart-page-container">
+    <div class="cart-breadcrumb">
+      <span>الرئيسية</span> / <span>سلة التسوق</span>
+    </div>
+
+    <h1 class="cart-page-title">سلة التسوق</h1>
+    <span class="cart-items-count-label">1 منتج</span>
+
+    <div class="cart-page-content">
+    
+      <div class="cart-items-section">
+        <div class="cart-page-item">
+          <div class="item-info-right">
+            <img src="image-missing-svgrepo-com.svg" alt="صورة المنتج">
+            <div class="item-text-details">
+              <h3>بجامه ولد اعمارى جديد جدا جدا جدا!</h3>
+              <span class="item-tag">تخفيض</span>
+            </div>
+          </div>
+
+          <div class="item-price-quantity">
+            <span class="item-price">150.00 ج.م</span>
+            <div class="quantity-controls">
+              <button class="qty-btn">+</button>
+              <span class="qty-num">1</span>
+              <button class="qty-btn">-</button>
+            </div>
+            <button class="delete-item-btn">
+              <i class="fa-regular fa-trash-can"></i> حذف
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="order-summary-box">
+        <h2>ملخص الطلب</h2>
+        
+        <div class="summary-row">
+          <span>المجموع الفرعي</span>
+          <span>150.00 ج.م</span>
+        </div>
+
+        <div class="summary-row shipping-row">
+          <span>شحن</span>
+          <span class="free-shipping-text">شحن مجاني <small>شحن مجاني للطلبات فوق 200 ريال</small></span>
+        </div>
+
+        <hr class="summary-divider">
+
+        <div class="summary-row total-row">
+          <span>الإجمالي</span>
+          <span class="total-price">2150.00 ج.م</span>
+        </div>
+
+        <a href="checkout.html" class="checkout-page-btn">
+          إتمام الطلب ←
+        </a>
+
+        <div class="summary-secure-badges">
+          <span>🔒 دفع آمن</span>
+          <span>🔄 إرجاع سهل</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

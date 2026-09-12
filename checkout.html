@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إتمام الطلب - MiniKids</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <main class="checkout-page-container">
+    <div class="cart-breadcrumb">
+      <span>الرئيسية</span> / <span>عودة للسلة</span> / <span>إتمام الطلب</span>
+    </div>
+
+    <h1 class="cart-page-title">إتمام الطلب</h1>
+
+    <div class="checkout-page-content">
+      
+      <div class="checkout-form-section">
+        
+        <div class="checkout-card">
+          <div class="checkout-card-header">
+            <span>1</span>
+            <h2>معلومات الاتصال</h2>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>الاسم الأول</label>
+              <input type="text" placeholder="الاسم الأول (الاختياري)">
+            </div>
+            <div class="form-group">
+              <label>رقم الجوال</label>
+              <input type="tel" placeholder="رقم الجوال">
+            </div>
+            <div class="form-group full-width">
+              <label>البريد الإلكتروني</label>
+              <input type="email" placeholder="example@email.com">
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-card">
+          <div class="checkout-card-header">
+            <span>2</span>
+            <h2>عنوان الشحن</h2>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>الدولة</label>
+              <select>
+                <option>مصر (20+)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>المدينة</label>
+              <select>
+                <option>أختر المدينة</option>
+                <option>القاهرة</option>
+                <option>الجيزة</option>
+                <option>الإسكندرية</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>الحي</label>
+              <input type="text" placeholder="الحي">
+            </div>
+            <div class="form-group">
+              <label>الشارع</label>
+              <input type="text" placeholder="الشارع">
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-card">
+          <div class="checkout-card-header">
+            <span>3</span>
+            <h2>طريقة الشحن</h2>
+          </div>
+          <p class="section-hint">أدخل عنواناً لمعرفة أطراف الشحن المتاحة</p>
+        </div>
+
+        <div class="checkout-card">
+          <div class="checkout-card-header">
+            <span>4</span>
+            <h2>ملاحظة على الطلب (اختياري)</h2>
+          </div>
+          <textarea placeholder="مثال: تفاصيل كافيه، ليدرس التواصل قبل التوصيل، كركه ضد الماء..." rows="3"></textarea>
+          <span class="char-count">0 / 500</span>
+        </div>
+
+        <div class="checkout-card">
+          <div class="checkout-card-header">
+            <span>5</span>
+            <h2>طريقة الدفع</h2>
+          </div>
+          <p class="section-hint">جميع المعاملات آمنة ومشفرة.</p>
+
+          <div class="payment-methods-list">
+            <label class="payment-option">
+              <input type="radio" name="payment" checked>
+              <span>الدفع عند الاستلام</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment">
+              <div class="payment-details">
+                <strong>Stripe Payment by Quimra</strong>
+                <small>Credit cards, Apple Pay, Google Pay via Stripe Checkout</small>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment">
+              <div class="payment-details">
+                <strong>Paymob</strong>
+                <small>Visa, Mastercard, Meeza, Valu, Kiosk, Valu via Paymob (Egypt/MENA gateways)</small>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment">
+              <div class="payment-details">
+                <strong>Vodafone cash</strong>
+                <small>test</small>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <button class="submit-order-btn">تأكيد الطلب</button>
+        <div class="checkout-security-note">🔒 فواتير ومتاجر</div>
+
+      </div>
+
+      <div class="checkout-summary-sidebar">
+        <div class="order-summary-box">
+          <h2>ملخص الطلب</h2>
+          
+          <div id="checkout-cart-items" class="checkout-items-list">
+           
+          </div>
+
+          <div class="coupon-box">
+            <input type="text" placeholder="أدخل كود الخصم">
+            <button>تطبيق</button>
+          </div>
+
+          <div class="summary-row">
+            <span>المجموع الفرعي</span>
+            <span id="checkout-subtotal">0.00 ج.م</span>
+          </div>
+
+          <div class="summary-row">
+            <span>الشحن</span>
+            <span id="checkout-shipping">0.00 ج.م</span>
+          </div>
+
+          <hr class="summary-divider">
+
+          <div class="summary-row total-row">
+            <span>الإجمالي</span>
+            <span id="checkout-total" class="total-price">0.00 ج.م</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

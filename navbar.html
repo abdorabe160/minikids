@@ -1,0 +1,84 @@
+<div class="top-bar" id="top-bar">
+  <div class="swiper top-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">شحن مجاني للطلبات فوق 500 جنيه</div>
+      <div class="swiper-slide">خصم 20% على الملابس</div>
+      <div class="swiper-slide">استبدال خلال 14 يوم</div>
+    </div>
+  </div>
+
+  <button class="close-top-bar" id="close-top-bar">×</button>
+</div>
+
+<div id="topSerch">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="text" id="search-input" placeholder="ابحث عن منتجات...">
+  <span><i class="fa-solid fa-xmark" id="closeSerch"></i></span>
+  
+  <div id="live-search-results"></div>
+</div>
+
+<div id="search-overlay" class="search-overlay"></div>
+
+<nav>
+  <a href="index.html">
+    <img src="1770336507440-52693736.webp" alt="شعار MiniKids">
+  </a>
+
+  <div class="nav-icons">
+    <button id="cart-open" class="cart-button">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span id="cart-count">0</span>
+    </button>
+
+    <div class="language-box">
+      <button id="language-toggle" aria-label="اللغة">
+        <i class="fa-solid fa-globe"></i>
+      </button>
+
+      <div class="language-dropdown" id="language-dropdown">
+        <button class="language-option" data-lang="ar">العربية</button>
+        <button class="language-option" data-lang="en">English</button>
+      </div>
+    </div>
+
+    <button aria-label="البحث" id="serchBtn">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+  
+ 
+</nav>
+
+<div id="cart-overlay" class="cart-overlay"></div>
+
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <h2 data-i18n="cartTitle">سلة التسوق</h2>
+    <button id="cart-close" class="close-cart">×</button>
+  </div>
+  
+  <div class="cart-info">
+    <span id="cart-products-count">0 منتجات</span>
+    <button data-i18n="viewAll">عرض الكل</button>
+  </div>
+  
+  <div class="cart-items" id="cartItems"></div>
+  
+  <div class="cart-footer">
+    <div class="payment-row">
+      <span data-i18n="securePayment">الدفع آمن 🔒</span>
+      
+      <div>
+        <small data-i18n="total">الإجمالي</small>
+        <strong id="cart-total">0 ج.م</strong>
+      </div>
+    </div>
+    
+    <a href="cart.html">
+      <button class="checkout-button" data-i18n="checkout">
+        إتمام الطلب ←
+      </button>
+    </a>
+  </div>
+</div>
