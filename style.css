@@ -832,7 +832,6 @@ opacity: 1;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: auto;
 }
 .product-card {
   width: 280px;
@@ -842,6 +841,7 @@ opacity: 1;
   color: #2e2121;
   transition: 0.25s;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.116);
+  position: relative;
 }
 
 .product-card:hover {

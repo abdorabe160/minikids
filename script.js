@@ -39,7 +39,7 @@ async function loadNavbar() {
   const navbarContainer = document.getElementById("navbar");
   if (!navbarContainer) return;
 
-  try {
+ 
     const response = await fetch("navbar.html");
     const data = await response.text();
     navbarContainer.innerHTML = data;
@@ -71,9 +71,7 @@ async function loadNavbar() {
     }
     
     updateCart();
-  } catch (error) {
-    console.error("خطأ في تحميل الهيدر:", error);
-  }
+  
 
   const serchBtn = document.getElementById('serchBtn');
   const topSerch = document.getElementById('topSerch');
