@@ -92,7 +92,9 @@ nav {
 }
 
 nav img {
-margin-bottom: 15px;
+  margin-bottom: 15px;
+  width: 45px;
+  height: 45px;
   object-fit: contain;
 }
 
