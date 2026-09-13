@@ -827,7 +827,7 @@ opacity: 1;
 #products {
   padding: 70px 5%;
   text-align: center;
-  gap: 20px;
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -841,7 +841,7 @@ opacity: 1;
   color: #2e2121;
   transition: 0.25s;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.116);
-  position: relative;
+   margin: 15px;
 }
 
 .product-card:hover {
@@ -869,7 +869,9 @@ opacity: 1;
 }
 
 .product-info {
+
   padding: 16px;
+
 }
 
 .category {
@@ -1346,8 +1348,9 @@ opacity: 1;
 }
 
 .products-grid-related {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  display: flex;
+  align-items: center;
+flex-wrap: wrap;
   gap: 20px;
 }
 

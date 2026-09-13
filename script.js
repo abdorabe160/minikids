@@ -717,7 +717,7 @@ function renderProducts() {
       <div class="product-info">
         <p class="category">${product.category}</p>
         <a href="product.html?id=${product.id}">
-          <h3>${product.title}</h3>
+          <h3>${product.title.slice(0, 30) + '...'}</h3>
         </a>
 
         <div class="product-bottom">
