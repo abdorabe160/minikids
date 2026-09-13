@@ -1348,10 +1348,12 @@ opacity: 1;
 }
 
 .products-grid-related {
+
   display: flex;
   align-items: center;
+ justify-content: center;
 flex-wrap: wrap;
-  gap: 20px;
+
 }
 
 .cart-page-container {
