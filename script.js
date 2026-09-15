@@ -267,10 +267,21 @@ loadFooter();
 
 async function getProducts() {
   try {
-    const response = await fetch("https://fakestoreapi.com/products");
+    const response = await fetch("https://dummyjson.com/products?limit=20");
     const data = await response.json();
 
-    allProducts = data;
+    // إصلاح الخطأ: استخراج المصفوفة وتوحيد البيانات
+    const rawProducts = Array.isArray(data) ? data : (data.products || []);
+    
+    allProducts = rawProducts.map(item => ({
+      id: item.id,
+      title: item.title,
+      price: item.price,
+      description: item.description,
+      category: item.category,
+      image: item.thumbnail || item.image,
+      rating: item.rating
+    }));
 
     if (document.getElementById("products")) {
       fillCategories();
@@ -736,7 +747,7 @@ function renderProducts() {
         </div>
       </div>
     </div>
-  `);
+  `).join('');
 
   renderPagination(totalPages);
 }
